@@ -1,0 +1,13 @@
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.Form1.resources
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.Properties.Resources.resources
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.csproj.GenerateResource.Cache
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.Form2.resources
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\bin\Debug\ArcToolRevisited.exe
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\bin\Debug\ArcToolRevisited.pdb
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\bin\Debug\zlib.net.dll
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.csprojResolveAssemblyReference.cache
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.exe
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.pdb
+E:\VisualStudioProjects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.ConvertChoice.resources
+C:\Users\derp\Documents\Visual Studio 2010\Projects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.exe
+C:\Users\derp\Documents\Visual Studio 2010\Projects\ArcToolRevisited\ArcToolRevisited\obj\x86\Debug\ArcToolRevisited.pdb

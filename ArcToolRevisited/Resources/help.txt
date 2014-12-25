@@ -1,0 +1,181 @@
+[Installation]
+
+    Just extract ArcToolRevisited.zip to it’s own folder and run ArcToolRevisited.exe.
+
+[Why this program]
+
+    Resident Evil 5 stores most game data in proprietary archive files (*.arc)
+    located in your resident evil 5\nativePC\Image\Archive directory. 
+    
+    This program can unpack the contents of those archive files, 
+    allowing you to modify them. Afterwards it allows you to repack the files. 
+    Additionally, some tools to convert textures into useful formats are provided.
+
+[Important Stuff]
+
+    When examining extracted files, you might come across files with a ".header" ending.
+    Never delete .header files. They are needed to convert your DDS files back
+    to TEX. Also never change the filename of a DDS file without also changing
+    the name of it’s corresponding .header file.
+
+
+
+
+
+A short guide on how to accomplish common tasks
+================================================
+
+Extraction Tasks
+----------------
+
+    Task a): "Extract a single *.arc"
+
+        1) click on “Extract Arc(s)”, 
+           navigate to the directory containing the .arc file you want to extract, 
+           select the .arc file and click open.
+
+        2) Select the destination directory where the contents should be unpacked to.
+
+    Task b): "Extract multiple *.arc files simultaneously"
+
+        1) click on “Extract Arc(s)”, 
+           navigate to the directory containing the .arc file you want to extract, 
+           select all .arc files you want and click open.
+
+        2) Select the destination directory where the contents should be unpacked to.
+
+    Task c): "Extract all Resident Evil 5 files"
+
+        1) Click on “Extract RE5”, 
+           navigate to your main resident evil 5 directory and select “RE5DX9.EXE” 
+           (you can also select “RE5DX10.exe” switch the drop down menu)
+
+        2) Select the destination directory where the contents should be unpacked to.
+
+
+Extraction Options:
+-------------------
+
+    [Checkbox]: "Create a Folder for each Arc"
+
+        When this checkbox is checked, 
+        the program will create a new folder with the name of the arc file.
+        The folder will be located in the output directory for each selected arc file.
+        Also works with complete resident evil 5 extraction.
+        
+        Checked by default, as you would normally want to keep the folder structure,
+        that was specified by the developers.
+
+    [Checkbox]: "Extract textures only"
+
+        When this checkbox is checked,
+        the program will only extract the textures (*.tex) from the arc file 
+        (while keeping the original folder hierarchy within the arc). 
+        Also works with complete resident evil 5 extraction.
+        
+        Useful when you only want to look at the textures.
+
+
+Repacking (modified) contents
+-----------------------------
+
+    General: You DON’T need to remove .dds or .header files from the directory before repacking. 
+             Just unpack, edit and repack.
+             The program will automatically handle .dds and .header files for you. 
+    
+    If you want the program can automatically convert all found .dds files back into .tex.
+    You will get a Dialog Box asking you whether any found .dds files should be converted back to .tex. 
+    So there’s no need for manual conversion. 
+    
+    1) Click on “Repack Arc”, navigate to the folder that holds your arc’s contents and click “OK”. 
+       For example if you have previously extracted:
+       “uPl00ChrisNormal.arc” to “C:\Chris”,
+       then select “C:\Chris”.
+
+    2) Select the destination directory where the new arc should be saved to and type a name for the arc. 
+       If you enter a filename that already exists in that directory, then that file will be overwritten.
+
+    3) Now you’ll be asked if you want to convert all .dds files that are found in the directory back to tex. 
+       If you edited some textures I suggest you click yes. Click save and wait for the repacking process to finish.
+
+Converting *.tex (texture) Files to editable *.dds
+--------------------------------------------------
+
+    General: The program will generate .header files. Each DDS file has a corrosponding .header file
+             with the same name as the dds. Do not rename or delete those files. 
+             They are needed to convert DDS back to TEX.
+
+    Most TEX Files will convert successfully. I tried to convert all RE5 files. 
+    Out of about 64000 Files about 750 didn’t convert to DDS. 
+    Those are mostly cubemaps, which are currently unsupported.
+
+    1) Click on “TEX to DDS”, 
+       navigate to the folder containing the TEX files you want to convert. 
+       Select all TEX files that should be converted. Then click “OK”.
+
+    2) Choose an Output Folder and wait for the process to finish.
+
+Converting DDS Files back to TEX
+---------------------------------
+
+    1) Click on “DDS to TEX”. You have three options now. 
+        
+        1. You can manually select the .dds file(s) you want to convert.
+        2. or you can convert all *.dds files in a directory (including subdirectories) back to .tex 
+        3. You can cancel this task, in which case we are done.
+
+    2) Choose one of the options described in the previous step.
+
+        Option 1) manually select files:
+            Just select all .dds files you want to convert and choose an output directory,
+            where the program should store the converted .tex files.
+        
+        Option 2) all Files in a directory:
+            Select the root directory from where the program should look for .dds files.
+            For example, if you have previously extracted “uPl00ChrisNormal.arc” to
+            “C:\Chris” and edited some dds files there, just select “C:\Chris” and
+            the program will convert all the .dds files back to .tex (overwriting other
+            tex files with the same name). 
+            
+            Note: Never delete .header files, unless you delete corresponding .dds file as well.
+
+        
+Example Use Case
+================
+
+    1) Extract uPl00ChrisNormal.arc to a directory of your choice. 
+       Textures will automatically be converted to dds. Just don’t delete or rename the .header files. 
+       They will be ignored when you repack the archive anyway. So theres no need to move them around.
+
+    2) Edit a .dds file of your choice (e.g. using photoshop and the DDS plugin offered by nvidia). 
+       Save as dds in DXT1 or DXT5 depending on what the file was before.
+       In general the following seems to be true:
+        - files that contain "_BM" are color maps and should be saved as DXT1.
+        - files that contain "_MM" are specular maps and should be saved as DXT1.
+        - files that contain "_NM" are normal maps and should be saved as DXT5.
+
+
+    3) When you’re done editing the files, 
+       select “Repack Arc” and select the main Folder of the extracted arc
+       (e.g. C:\Chris\uPl00ChrisNormal\ or wherever you unpacked the files to). 
+       Conversion of .dds files to .tex will be handled automatically for you.
+
+    4) Copy your .arc to the Image\Archive directory, overwriting the original .arc file. 
+       Please don't forget to make a backup of the original.
+       Done! You can now check your mod ingame.
+
+Note: If you want to convert textures manually then use the corrosponding buttons.
+      This is all for now. Happy modding!
+
+
+[License]
+    
+    By using this software you agree to the following terms:
+    This software is provided ‘as-is’, without any express or implied
+    warranty. In no event will the authors be held liable for any damages
+    arising from the use of this software.
+
+    Resident Evil (TM) 5 is copyright by CAPCOM CO., LTD. 2009 ALL RIGHTS RESERVED.
+    The images used in the making of the header bar of this program 
+    are freely available online and copyright by their respective owners.
+    ZLIB.NET is free software developed by ComponentAce.
